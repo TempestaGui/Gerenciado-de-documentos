@@ -1,6 +1,8 @@
 package org.aplicacao;
 
-import javax.swing.text.Document;
+
+import org.aplicacao.entities.Document;
+
 import java.io.File;
 import java.io.IOException;
 

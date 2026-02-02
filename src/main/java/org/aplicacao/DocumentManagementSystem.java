@@ -8,6 +8,4 @@ public class DocumentManagementSystem {
     List<Document> contents(){
         return null;
     }
-
-
 }
