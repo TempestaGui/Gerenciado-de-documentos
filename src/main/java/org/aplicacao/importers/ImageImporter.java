@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import static org.aplicacao.Attributes.*;
+
 public class ImageImporter implements Importer {
 
     @Override
