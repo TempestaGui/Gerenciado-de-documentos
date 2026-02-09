@@ -1,16 +1,25 @@
 package org.aplicacao;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.toList;
+import static org.aplicacao.Attributes.PATH;
 
 public class TextFile {
 
     private final Map<String, String> attributes;
     private final List<String> lines;
 
-    public TextFile(List<String> lines, Map<String, String> attributes){
-        this.lines = lines;
-        this.attributes = attributes;
+    public TextFile(final File file) throws IOException {
+        attributes = new HashMap<>();
+        attributes.put(PATH, file.getPath());
+        lines = Files.lines(file.toPath()).collect(toList());
     }
 
     public void addLineSuffix(final String prefix, final String attributeName){
@@ -20,5 +29,13 @@ public class TextFile {
                 break;
             }
         }
+    }
+
+    public Map<String, String> getAttributes() {
+        return attributes;
+    }
+
+    public List<String> getLines() {
+        return lines;
     }
 }
