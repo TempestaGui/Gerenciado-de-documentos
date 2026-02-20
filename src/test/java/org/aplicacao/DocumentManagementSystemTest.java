@@ -40,4 +40,14 @@ public class DocumentManagementSystemTest {
                 "with Dr. Avaj from 29th December 2016 to 5th January 2017.");
         assertTypeIs("LETTER", document);
     }
+
+    @Test
+    public void shouldImportImageAttributes() throws Exception {
+        //...
+    }
+
+    @Test
+    public void shouldImportInvoiceAttributes() throws Exception {
+        //...
+    }
 }
